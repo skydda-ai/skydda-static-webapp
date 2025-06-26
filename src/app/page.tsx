@@ -1,5 +1,5 @@
 import Image from "next/image";
-console.log('Hello from page.tsx')
+console.log('Hello from page.tsx');
 
 export default function Home() {  
   return (
