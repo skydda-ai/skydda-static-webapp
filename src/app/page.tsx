@@ -51,12 +51,10 @@ const Home = () => {
         success: isSuccess
       });
 
-      if (isSuccess) {
-        setTimeout(() => {
-          setIsEmailRequestModalOpen(false);
-          resetEmailForm();
-        }, 1500);
-      }
+      setTimeout(() => {
+        setIsEmailRequestModalOpen(false);
+        resetEmailForm();
+      }, 1500);
     } catch {
       setResMessage({
         message: 'Network error. Please try again later.',
