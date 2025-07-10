@@ -10,10 +10,12 @@ import Modal from '@/components/modal';
 const SUCCESS_MESSAGE = 'OK';
 
 const Home = () => {
-  const [isEmailRequestModalOpen, setIsEmailRequestModalOpen] = useState(false);
-  const [isJoinTeamModalOpen, setIsJoinTeamModalOpen] = useState(false);
-  const [email, setEmail] = useState('');
-  const [emailError, setEmailError] = useState('');
+  const [isEmailRequestModalOpen, setIsEmailRequestModalOpen] =
+    useState<boolean>(false);
+  const [isJoinTeamModalOpen, setIsJoinTeamModalOpen] =
+    useState<boolean>(false);
+  const [email, setEmail] = useState<string>('');
+  const [emailError, setEmailError] = useState<string>('');
   const [resMessage, setResMessage] = useState<{
     message: string;
     success: boolean | null;
