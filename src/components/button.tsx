@@ -3,6 +3,8 @@ import React from 'react';
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: 'filled' | 'outline';
   children: React.ReactNode;
+  handleButtonClick?: () => void;
+  className?: string;
 };
 
 const baseStyles =
@@ -16,11 +18,13 @@ const variants = {
 export const Button: React.FC<ButtonProps> = ({
   variant = 'filled',
   children,
+  handleButtonClick,
   className = '',
   ...props
 }) => (
   <button
     className={`${baseStyles} ${variants[variant]} ${className}`}
+    onClick={handleButtonClick}
     {...props}
   >
     {children}
