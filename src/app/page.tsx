@@ -6,6 +6,7 @@ import { useCreateLeadMutation } from './api';
 import Button from '@/components/button';
 import Loader from '@/components/loader';
 import Modal from '@/components/modal';
+import { event } from '@/lib/gtag';
 
 const SUCCESS_MESSAGE = 'OK';
 
@@ -32,8 +33,35 @@ const Home = () => {
     setResMessage({ message: '', success: null });
   };
 
+  const handleEarlyAccessClick = () => {
+    event({
+      action: 'click_early_access',
+      category: 'engagement',
+      label: 'Apply Early Access',
+      value: 1
+    });
+    setIsEmailRequestModalOpen(true);
+  };
+
+  const handleJoinTeamClick = () => {
+    event({
+      action: 'click_join_team',
+      category: 'engagement',
+      label: 'Join Team',
+      value: 1
+    });
+    setIsJoinTeamModalOpen(true);
+  };
+
   const handleEmailSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    event({
+      action: 'click_email_submit',
+      category: 'engagement',
+      label: 'Submit Email',
+      value: 1
+    });
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setEmailError('Please enter a valid email');
@@ -149,21 +177,17 @@ const Home = () => {
 
         <main className='relative z-10 flex items-center flex-col gap-[60px] md:flex-row md:gap-[80px] mt-[60px]'>
           <div className='flex flex-col justify-center gap-[58px]'>
-            <h1 className='font-jakarta text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white'>
-              REIMAGINING THE SOC
-              <br />
-              <span className='font-normal'>FROM THE GROUND UP</span>
+            <h1 className='font-jakarta text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white flex flex-col gap-2'>
+              <span>BUILDING THE MODERN SOC FOR THE AI ERA</span>
+              <span className='font-normal'>
+                PILOT READY. VALUE READY. BUILT TO RUN TODAY.
+              </span>
             </h1>
             <div className='flex flex-col md:flex-row gap-4'>
-              <Button
-                handleButtonClick={() => setIsEmailRequestModalOpen(true)}
-              >
+              <Button handleButtonClick={handleEarlyAccessClick}>
                 Apply for early access
               </Button>
-              <Button
-                variant='outline'
-                handleButtonClick={() => setIsJoinTeamModalOpen(true)}
-              >
+              <Button variant='outline' handleButtonClick={handleJoinTeamClick}>
                 Join our team
               </Button>
             </div>
