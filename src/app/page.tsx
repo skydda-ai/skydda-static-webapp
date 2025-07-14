@@ -6,6 +6,7 @@ import { useCreateLeadMutation } from './api';
 import Button from '@/components/button';
 import Loader from '@/components/loader';
 import Modal from '@/components/modal';
+import { event } from '@/lib/gtag';
 
 const SUCCESS_MESSAGE = 'OK';
 
@@ -32,8 +33,35 @@ const Home = () => {
     setResMessage({ message: '', success: null });
   };
 
+  const handleEarlyAccessClick = () => {
+    event({
+      action: 'click_early_access',
+      category: 'engagement',
+      label: 'Apply Early Access',
+      value: 1
+    });
+    setIsEmailRequestModalOpen(true);
+  };
+
+  const handleJoinTeamClick = () => {
+    event({
+      action: 'click_join_team',
+      category: 'engagement',
+      label: 'Join Team',
+      value: 1
+    });
+    setIsJoinTeamModalOpen(true);
+  };
+
   const handleEmailSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    event({
+      action: 'click_email_submit',
+      category: 'engagement',
+      label: 'Submit Email',
+      value: 1
+    });
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setEmailError('Please enter a valid email');
@@ -155,15 +183,10 @@ const Home = () => {
               <span className='font-normal'>FROM THE GROUND UP</span>
             </h1>
             <div className='flex flex-col md:flex-row gap-4'>
-              <Button
-                handleButtonClick={() => setIsEmailRequestModalOpen(true)}
-              >
+              <Button handleButtonClick={handleEarlyAccessClick}>
                 Apply for early access
               </Button>
-              <Button
-                variant='outline'
-                handleButtonClick={() => setIsJoinTeamModalOpen(true)}
-              >
+              <Button variant='outline' handleButtonClick={handleJoinTeamClick}>
                 Join our team
               </Button>
             </div>
