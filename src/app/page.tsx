@@ -177,10 +177,11 @@ const Home = () => {
 
         <main className='relative z-10 flex items-center flex-col gap-[60px] md:flex-row md:gap-[80px] mt-[60px]'>
           <div className='flex flex-col justify-center gap-[58px]'>
-            <h1 className='font-jakarta text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white'>
-              REIMAGINING THE SOC
-              <br />
-              <span className='font-normal'>FROM THE GROUND UP</span>
+            <h1 className='font-jakarta text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white flex flex-col gap-2'>
+              <span>BUILDING THE MODERN SOC FOR THE AI ERA</span>
+              <span className='font-normal'>
+                PILOT READY. VALUE READY. BUILT TO RUN TODAY.
+              </span>
             </h1>
             <div className='flex flex-col md:flex-row gap-4'>
               <Button handleButtonClick={handleEarlyAccessClick}>
