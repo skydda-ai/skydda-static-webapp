@@ -46,8 +46,8 @@ jobs:
           output_location: "" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
         env:
-          GOOGLE_ANALYTICS_ID: ${{ steps.keyvault.outputs.GOOGLE_ANALYTICS_ID }}
-          NEXT_PUBLIC_API_BASE_URL: ${{ steps.keyvault.outputs.NEXT_PUBLIC_API_BASE_URL }}
+          GOOGLE_ANALYTICS_ID: ${{ env.GOOGLE_ANALYTICS_ID }}
+          NEXT_PUBLIC_API_BASE_URL: ${{ env.NEXT_PUBLIC_API_BASE_URL }}
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
