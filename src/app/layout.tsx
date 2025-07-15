@@ -20,7 +20,7 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: 'Skydda.ai',
   description:
-    'Building the Modern SOC for the AI Era\n Pilot ready. Value ready. Built to run today.'
+    'Welcome to the Modern SOC for the AI Era\n Future ready. Value ready. Built to run today.'
 };
 
 export default function RootLayout({

@@ -175,15 +175,15 @@ const Home = () => {
           </div>
         </header>
 
-        <main className='relative z-10 flex items-center flex-col gap-[60px] md:flex-row md:gap-[80px] mt-[60px]'>
+        <main className='relative z-10 flex items-center flex-col gap-[60px] lg:flex-row md:gap-[80px] mt-[60px] xl:h-[455px]'>
           <div className='flex flex-col justify-center gap-[58px]'>
-            <h1 className='font-jakarta text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white flex flex-col gap-2'>
-              <span>BUILDING THE MODERN SOC FOR THE AI ERA</span>
-              <span className='font-normal'>
-                PILOT READY. VALUE READY. BUILT TO RUN TODAY.
+            <h1 className='font-jakarta text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white flex flex-col gap-6'>
+              <span>Welcome to the Modern SOC for the AI Era</span>
+              <span className='font-normal text-lg sm:text-xl lg:text-2xl xl:text-3xl'>
+                Future ready. Value ready. Built to run today.
               </span>
             </h1>
-            <div className='flex flex-col md:flex-row gap-4'>
+            <div className='flex flex-col xl:flex-row gap-4'>
               <Button handleButtonClick={handleEarlyAccessClick}>
                 Apply for early access
               </Button>
@@ -194,15 +194,8 @@ const Home = () => {
           </div>
 
           <div className='flex flex-1 justify-center items-center'>
-            <div className='relative w-[230px] md:w-[460px]'>
-              <div className='absolute inset-0 left-1 bottom-1 top-1 md:left-0 w-[220px] md:w-[460px] bg-[linear-gradient(127.9deg,_rgba(148,_62,_250,_0.7)_1.58%,_rgba(210,_77,_228,_0.7)_98.42%)] mix-blend-color pointer-events-none z-0'></div>
-              <video
-                src='/gif/skydda_icon.mp4'
-                autoPlay
-                loop
-                muted
-                className='w-[230px] md:w-[460px]'
-              />
+            <div className='w-[230px] md:w-[345px] lg:w-[460px]'>
+              <video src='/gif/skydda_icon.mp4' autoPlay loop muted />
             </div>
           </div>
         </main>
