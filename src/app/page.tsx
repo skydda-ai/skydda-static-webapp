@@ -178,7 +178,7 @@ const Home = () => {
         <main className='relative z-10 flex items-center flex-col gap-[60px] lg:flex-row md:gap-[80px] mt-[60px] xl:h-[455px]'>
           <div className='flex flex-col justify-center gap-[58px]'>
             <h1 className='font-jakarta text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white flex flex-col gap-6'>
-              <span>Welcome to the Modern SOC for the AI Era</span>
+              <span>The Modern SOC is here</span>
               <span className='font-normal text-lg sm:text-xl lg:text-2xl xl:text-3xl'>
                 Future ready. Value ready. Built to run today.
               </span>
@@ -195,7 +195,9 @@ const Home = () => {
 
           <div className='flex flex-1 justify-center items-center'>
             <div className='w-[230px] md:w-[345px] lg:w-[460px]'>
-              <video src='/gif/skydda_icon.mp4' autoPlay loop muted />
+              <video autoPlay muted loop playsInline>
+                <source src='/gif/skydda_icon.mp4' type='video/mp4' />
+              </video>
             </div>
           </div>
         </main>
