@@ -21,7 +21,7 @@ const LivingOrganism = () => {
       {/* The Living Organism */}
       <motion.div
         className="relative w-64 h-64 md:w-96 md:h-96"
-        style={{ scale, opacity }}
+        style={{ scale, opacity: 0.8 }}
       >
         {/* Core */}
         <motion.div
@@ -82,12 +82,15 @@ const LivingOrganism = () => {
       {/* Text overlay */}
       <motion.div
         className="absolute text-center px-6"
-        style={{ opacity: useTransform(scrollYProgress, [0.3, 0.5], [0, 1]) }}
+        style={{ opacity: 0.8 }}
       >
-        <h2 className="headline-serif text-2xl md:text-3xl lg:text-4xl text-foreground/85 mb-6">
+        <h2 className="headline-serif text-2xl md:text-3xl lg:text-4xl text-foreground mb-6">
           It is not a tool. It is alive.
         </h2>
-        <p className="verse text-base md:text-lg max-w-md mx-auto">
+        <p 
+          className="verse text-base md:text-lg max-w-md mx-auto text-secondary-foreground"
+          style={{ textShadow: "0 2px 10px rgba(0, 0, 0, 0.8)" }}
+        >
           Static defenses die. This... evolves.
           <br />
           <span className="block mt-2">It does not merely observe your world. It masters it.</span>

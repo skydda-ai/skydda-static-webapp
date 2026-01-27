@@ -1,9 +1,6 @@
-import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 const FooterGate = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, margin: "-20%" });
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -15,62 +12,29 @@ const FooterGate = () => {
   };
 
   return (
-    <footer
-      ref={ref}
-      className="min-h-screen flex items-center justify-center px-6"
-    >
-      <motion.div
-        className="text-center max-w-md mx-auto"
-        initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ duration: 1.5 }}
-      >
+    <footer className="min-h-screen flex items-center justify-center px-6 relative z-10 bg-background">
+      <div className="text-center max-w-md mx-auto">
         {/* Brand */}
-        <motion.h2
-          className="headline-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 1, delay: 0.2 }}
-        >
+        <h2 className="headline-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-4">
           Skydda.
-        </motion.h2>
+        </h2>
 
-        <motion.p
-          className="text-whisper text-sm tracking-[0.2em] uppercase mb-16"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 0.5 } : { opacity: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
-        >
+        <p className="text-muted-foreground text-sm tracking-[0.2em] uppercase mb-16">
           The Shield That Thinks.
-        </motion.p>
+        </p>
 
         {/* Mystery stat */}
-        <motion.p
-          className="text-muted-foreground/60 text-sm mb-2"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 0.6 } : { opacity: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
-        >
+        <p className="text-muted-foreground text-sm mb-2">
           We are currently protecting{" "}
-          <span className="text-primary/70">[Redacted]</span> enterprises.
-        </motion.p>
+          <span className="text-primary">[Redacted]</span> enterprises.
+        </p>
 
-        <motion.p
-          className="headline-serif italic text-lg text-foreground/70 mb-12"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 0.7 } : { opacity: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
-        >
+        <p className="headline-serif italic text-lg text-foreground mb-12">
           Are you ready to evolve?
-        </motion.p>
+        </p>
 
         {/* The Gate */}
-        <motion.form
-          onSubmit={handleSubmit}
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 1, delay: 1 }}
-        >
+        <form onSubmit={handleSubmit}>
           {!isSubmitted ? (
             <div className="relative">
               <input
@@ -81,38 +45,45 @@ const FooterGate = () => {
                 className="gate-input text-center"
                 required
               />
-              <motion.button
+              <button
                 type="submit"
-                className="mt-8 text-xs tracking-[0.3em] uppercase text-primary/70 hover:text-primary transition-colors duration-500"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                className="mt-8 bg-primary text-black text-xs tracking-[0.3em] uppercase font-medium py-4 px-8 rounded-none hover:bg-primary/90 transition-colors duration-300"
               >
                 Request Invitation
-              </motion.button>
+              </button>
             </div>
           ) : (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="text-primary/80 text-sm tracking-wide"
-            >
+            <div className="text-primary text-sm tracking-wide">
               The gate has opened. We will reach you.
-            </motion.div>
+            </div>
           )}
-        </motion.form>
+        </form>
 
-        {/* Subtle brand mark at bottom */}
-        <motion.div
-          className="mt-24 opacity-20"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 0.2 } : { opacity: 0 }}
-          transition={{ duration: 1, delay: 1.2 }}
+        {/* Scroll to top */}
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="mt-36 mx-auto flex flex-col items-center gap-2 text-primary hover:text-primary/80 transition-colors duration-300 cursor-pointer"
+          aria-label="Scroll to top"
         >
-          <div className="w-8 h-8 mx-auto rounded-full border border-primary/30 flex items-center justify-center">
-            <div className="w-2 h-2 rounded-full bg-primary/50" />
+          <div className="w-10 h-10 rounded-full border-[1px] border-current flex items-center justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M12 19V5" />
+              <path d="M5 12l7-7 7 7" />
+            </svg>
           </div>
-        </motion.div>
-      </motion.div>
+          <span className="text-xs tracking-[0.2em] uppercase">Back to top</span>
+        </button>
+      </div>
     </footer>
   );
 };

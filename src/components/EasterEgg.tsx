@@ -61,7 +61,7 @@ const EasterEgg = () => {
             </p>
 
             <motion.p
-              className="mt-8 text-whisper text-xs tracking-widest"
+              className="mt-8 text-whisper text-xs tracking-widest text-secondary-foreground"
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.5 }}
               transition={{ delay: 2 }}

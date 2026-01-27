@@ -75,7 +75,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
             className="absolute bottom-1/3 text-whisper text-sm tracking-[0.3em] uppercase"
             initial={{ opacity: 0 }}
             animate={{ opacity: phase === "text" || phase === "fracture" ? 0.6 : 0 }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1 }}
           >
             In Swedish, it means to protect.
           </motion.p>
