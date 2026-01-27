@@ -16,11 +16,11 @@ const NarrativeSection = ({ headline, verses, index }: NarrativeSectionProps) =>
         </h2>
 
         {/* Verses */}
-        <div className="space-y-6">
+        <div className="space-y-4">
           {verses.map((verse, i) => (
             <p
               key={i}
-              className="headline-serif italic text-foreground/70 text-base md:text-lg leading-relaxed"
+              className="headline-serif italic text-foreground/70 text-base md:text-xl leading-relaxed"
             >
               {verse}
             </p>

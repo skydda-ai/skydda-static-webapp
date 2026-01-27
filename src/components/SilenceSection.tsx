@@ -67,9 +67,9 @@ const SilenceSection = () => {
         </motion.h2>
 
         <motion.p
-          className="verse text-base md:text-lg max-w-lg mx-auto relative"
+          className="verse text-base md:text-xl max-w-lg mx-auto relative text-secondary-foreground"
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 0.7, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 0.7 }}
         >
           Let the machine carry the weight. Let the noise dissolve.

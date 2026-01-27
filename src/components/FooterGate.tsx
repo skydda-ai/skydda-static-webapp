@@ -29,7 +29,7 @@ const FooterGate = () => {
           <span className="text-primary">[Redacted]</span> enterprises.
         </p>
 
-        <p className="headline-serif italic text-lg text-foreground mb-12">
+        <p className="headline-serif italic text-[20px] text-foreground mb-12">
           Are you ready to evolve?
         </p>
 
