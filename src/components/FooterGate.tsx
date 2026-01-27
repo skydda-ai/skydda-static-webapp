@@ -22,7 +22,7 @@ const FooterGate = () => {
   };
 
   return (
-    <footer className="min-h-screen flex items-center justify-center px-6 relative z-10 bg-background">
+    <footer className="min-h-screen flex items-center justify-center px-6 relative z-10">
       <div className="text-center max-w-md mx-auto">
         {/* Brand */}
         <h2 className="headline-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-4">
