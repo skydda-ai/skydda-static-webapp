@@ -1,9 +1,6 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 const HeroSection = () => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6">
       <div className="text-center max-w-2xl mx-auto z-10">
@@ -17,23 +14,14 @@ const HeroSection = () => {
           The world is louder than you think.
         </motion.h1>
 
-        {/* Sub-text that fades in on hover */}
-        <motion.div
-          className="relative h-32"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          <motion.p
-            className="verse text-lg md:text-xl leading-relaxed absolute inset-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: isHovered ? 0.8 : 0.3 }}
-            transition={{ duration: 0.8 }}
-          >
+        {/* Sub-text */}
+        <div className="relative h-32">
+          <p className="verse text-lg md:text-xl leading-relaxed absolute inset-0 opacity-100">
             They move at machine speed. They adapt. They disguise.
             <br />
             <span className="block mt-2">While you sleep, the noise becomes deafening.</span>
-          </motion.p>
-        </motion.div>
+          </p>
+        </div>
 
         {/* Scroll indicator */}
         <motion.div
