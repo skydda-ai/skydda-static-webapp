@@ -73,7 +73,7 @@ const FooterGate = () => {
       {/* Scroll to top - Fixed on right side */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className={`fixed right-6 bottom-12 md:right-12 md:bottom-24 z-50 flex flex-row items-center gap-2 text-primary hover:text-primary/80 transition-all duration-300 cursor-pointer ${
+        className={`fixed right-6 bottom-12 md:right-12 md:bottom-24 z-50 flex flex-row items-center gap-3 text-primary hover:text-primary/80 transition-all duration-300 cursor-pointer ${
           isScrolled ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
         }`}
         aria-label="Scroll to top"
