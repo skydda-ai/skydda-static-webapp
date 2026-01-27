@@ -1,8 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const FooterGate = () => {
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -58,32 +68,34 @@ const FooterGate = () => {
             </div>
           )}
         </form>
-
-        {/* Scroll to top */}
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="mt-36 mx-auto flex flex-col items-center gap-2 text-primary hover:text-primary/80 transition-colors duration-300 cursor-pointer"
-          aria-label="Scroll to top"
-        >
-          <div className="w-10 h-10 rounded-full border-[1px] border-current flex items-center justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M12 19V5" />
-              <path d="M5 12l7-7 7 7" />
-            </svg>
-          </div>
-          <span className="text-xs tracking-[0.2em] uppercase">Back to top</span>
-        </button>
       </div>
+
+      {/* Scroll to top - Fixed on right side */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className={`fixed right-6 bottom-12 md:right-12 md:bottom-24 z-50 flex flex-row items-center gap-2 text-primary hover:text-primary/80 transition-all duration-300 cursor-pointer ${
+          isScrolled ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+        }`}
+        aria-label="Scroll to top"
+      >
+        <div className="w-10 h-10 rounded-full border-[1px] border-current flex items-center justify-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M12 19V5" />
+            <path d="M5 12l7-7 7 7" />
+          </svg>
+        </div>
+        <span className="text-xs tracking-[0.2em] uppercase">Scroll to top</span>
+      </button>
     </footer>
   );
 };
