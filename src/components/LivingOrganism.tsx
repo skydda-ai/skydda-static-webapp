@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { colors } from "@/lib/colors";
 
 const LivingOrganism = () => {
   const ref = useRef(null);
@@ -59,9 +60,9 @@ const LivingOrganism = () => {
               }}
               animate={{
                 boxShadow: [
-                  "0 0 10px hsla(185, 80%, 50%, 0.3)",
-                  "0 0 20px hsla(185, 80%, 50%, 0.6)",
-                  "0 0 10px hsla(185, 80%, 50%, 0.3)",
+                  `0 0 10px ${colors.glowPrimary.hsla(0.3)}`,
+                  `0 0 20px ${colors.glowPrimary.hsla(0.6)}`,
+                  `0 0 10px ${colors.glowPrimary.hsla(0.3)}`,
                 ],
               }}
               transition={{

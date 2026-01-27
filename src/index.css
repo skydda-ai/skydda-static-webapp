@@ -5,50 +5,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
 /* Skydda - The Enigma Edition Design System */
+/* 
+ * NOTE: All color values are centralized in src/lib/colors.ts
+ * When updating colors, update both this file and colors.ts to maintain consistency.
+ * CSS variables are used by Tailwind classes, while colors.ts is used for programmatic access.
+ */
 
 @layer base {
   :root {
-    /* Core darkness palette */
+    /* Core darkness palette - See colors.background, colors.foreground */
     --background: 0 0% 4%;
     --foreground: 0 0% 92%;
 
+    /* Card colors - See colors.card, colors.cardForeground */
     --card: 0 0% 6%;
     --card-foreground: 0 0% 92%;
 
+    /* Popover colors - See colors.popover, colors.popoverForeground */
     --popover: 0 0% 6%;
     --popover-foreground: 0 0% 92%;
 
-    /* Living glow - cyan pulse */
+    /* Living glow - cyan pulse - See colors.primary */
     --primary: 185 80% 50%;
     --primary-foreground: 0 0% 4%;
 
-    /* Muted whispers */
+    /* Muted whispers - See colors.secondary */
     --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 70%;
 
+    /* Muted colors - See colors.muted */
     --muted: 0 0% 10%;
     --muted-foreground: 0 0% 50%;
 
-    /* Accent glow */
+    /* Accent glow - See colors.accent */
     --accent: 185 60% 35%;
     --accent-foreground: 0 0% 92%;
 
+    /* Destructive - See colors.destructive */
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 92%;
 
+    /* Border and input - See colors.border, colors.input, colors.ring */
     --border: 0 0% 15%;
     --input: 0 0% 15%;
     --ring: 185 80% 50%;
 
     --radius: 0.25rem;
 
-    /* Custom tokens for Skydda */
+    /* Custom tokens for Skydda - See colors.glowPrimary, colors.glowSecondary, colors.void, colors.whisper */
     --glow-primary: 185 80% 50%;
     --glow-secondary: 200 70% 40%;
     --void: 0 0% 2%;
     --whisper: 0 0% 40%;
     
-    /* Gradients */
+    /* Gradients - Using colors from the centralized system */
     --gradient-glow: linear-gradient(135deg, hsl(185 80% 50% / 0.2), hsl(200 70% 40% / 0.1));
     --gradient-void: radial-gradient(ellipse at center, hsl(0 0% 6%), hsl(0 0% 2%));
   }

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { colors } from "@/lib/colors";
 
 interface Particle {
   x: number;
@@ -46,7 +47,7 @@ const ParticleField = ({ mousePosition, scrollProgress }: ParticleFieldProps) =>
     }));
 
     const animate = () => {
-      ctx.fillStyle = "rgba(10, 10, 10, 0.1)";
+      ctx.fillStyle = colors.particleBackground.default;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       const centerX = canvas.width / 2;
@@ -86,14 +87,14 @@ const ParticleField = ({ mousePosition, scrollProgress }: ParticleFieldProps) =>
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `hsla(185, 80%, 50%, ${glowOpacity})`;
+        ctx.fillStyle = colors.glowPrimary.hsla(glowOpacity);
         ctx.fill();
 
         // Draw glow for illuminated particles
         if (isIlluminated) {
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2);
-          ctx.fillStyle = `hsla(185, 80%, 50%, ${glowOpacity * 0.2})`;
+          ctx.fillStyle = colors.glowPrimary.hsla(glowOpacity * 0.2);
           ctx.fill();
         }
       });
@@ -109,7 +110,7 @@ const ParticleField = ({ mousePosition, scrollProgress }: ParticleFieldProps) =>
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `hsla(185, 80%, 50%, ${0.1 * (1 - distance / 80)})`;
+            ctx.strokeStyle = colors.glowPrimary.hsla(0.1 * (1 - distance / 80));
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }

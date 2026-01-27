@@ -11,6 +11,7 @@
   will-change: filter;
   transition: filter 300ms;
 }
+/* Note: Logo colors are Vite defaults. Consider updating to use colors from src/lib/colors.ts if needed */
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
@@ -37,6 +38,7 @@
   padding: 2em;
 }
 
+/* Note: Using muted-foreground color from design system. See src/lib/colors.ts */
 .read-the-docs {
-  color: #888;
+  color: hsl(var(--muted-foreground));
 }
