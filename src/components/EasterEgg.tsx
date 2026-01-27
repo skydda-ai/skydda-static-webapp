@@ -17,7 +17,7 @@ const EasterEgg = () => {
     const checkIdle = () => {
       const elapsed = (Date.now() - lastActivity) / 1000;
       setIdleTime(elapsed);
-      if (elapsed >= 3) {
+      if (elapsed >= 30) {
         setShowSecret(true);
       }
     };
