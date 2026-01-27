@@ -16,7 +16,7 @@ const NarrativeSection = ({ headline, verses, index }: NarrativeSectionProps) =>
       ref={ref}
       className="min-h-screen flex items-center justify-center px-6 py-24"
     >
-      <div className="max-w-xl mx-auto text-center">
+      <div className="max-w-2xl mx-auto text-center">
         <h2 className="headline-serif text-2xl md:text-3xl lg:text-4xl text-foreground mb-12">
           {headline}
         </h2>
