@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+/* Skydda - The Enigma Edition Design System */
+
+@layer base {
+  :root {
+    /* Core darkness palette */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 92%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 92%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 92%;
+
+    /* Living glow - cyan pulse */
+    --primary: 185 80% 50%;
+    --primary-foreground: 0 0% 4%;
+
+    /* Muted whispers */
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 70%;
+
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 50%;
+
+    /* Accent glow */
+    --accent: 185 60% 35%;
+    --accent-foreground: 0 0% 92%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 92%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 185 80% 50%;
+
+    --radius: 0.25rem;
+
+    /* Custom tokens for Skydda */
+    --glow-primary: 185 80% 50%;
+    --glow-secondary: 200 70% 40%;
+    --void: 0 0% 2%;
+    --whisper: 0 0% 40%;
+    
+    /* Gradients */
+    --gradient-glow: linear-gradient(135deg, hsl(185 80% 50% / 0.2), hsl(200 70% 40% / 0.1));
+    --gradient-void: radial-gradient(ellipse at center, hsl(0 0% 6%), hsl(0 0% 2%));
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom scrollbar for the mysterious feel */
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--void));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--glow-primary) / 0.3);
+  }
+}
+
+@layer components {
+  /* Headline styling - elegant serif */
+  .headline-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+    @apply tracking-tight;
+  }
+
+  /* Whisper text - barely visible until needed */
+  .text-whisper {
+    @apply text-muted-foreground/60 text-sm tracking-wide;
+  }
+
+  /* Pulse animation for the heartbeat */
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--glow-primary) / 0.3),
+                  0 0 40px hsl(var(--glow-primary) / 0.1);
+      transform: scale(1);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(var(--glow-primary) / 0.5),
+                  0 0 80px hsl(var(--glow-primary) / 0.2);
+      transform: scale(1.1);
+    }
+  }
+
+  /* Fade in animation */
+  .fade-in-slow {
+    animation: fadeInSlow 2s ease-out forwards;
+  }
+
+  @keyframes fadeInSlow {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Living organism pulse */
+  .organism-pulse {
+    animation: organismPulse 4s ease-in-out infinite;
+  }
+
+  @keyframes organismPulse {
+    0%, 100% {
+      filter: drop-shadow(0 0 30px hsl(var(--glow-primary) / 0.4));
+    }
+    50% {
+      filter: drop-shadow(0 0 60px hsl(var(--glow-primary) / 0.6));
+    }
+  }
+
+  /* Narrative verse styling */
+  .verse {
+    @apply headline-serif italic text-secondary-foreground/80 leading-relaxed;
+  }
+
+  /* Gate input styling */
+  .gate-input {
+    @apply bg-transparent border-b border-muted-foreground/30 
+           focus:border-primary/50 focus:outline-none
+           text-foreground placeholder:text-muted-foreground/40
+           py-3 px-0 w-full transition-colors duration-500;
+  }
+}
