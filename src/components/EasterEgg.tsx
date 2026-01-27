@@ -17,7 +17,7 @@ const EasterEgg = () => {
     const checkIdle = () => {
       const elapsed = (Date.now() - lastActivity) / 1000;
       setIdleTime(elapsed);
-      if (elapsed >= 30) {
+      if (elapsed >= 3) {
         setShowSecret(true);
       }
     };
@@ -61,9 +61,9 @@ const EasterEgg = () => {
             </p>
 
             <motion.p
-              className="mt-8 text-whisper text-xs tracking-widest text-secondary-foreground"
+              className="mt-8 text-xs tracking-widest text-secondary-foreground"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 0.5 }}
+              animate={{ opacity: 1 }}
               transition={{ delay: 2 }}
             >
               — The Brand Truth
