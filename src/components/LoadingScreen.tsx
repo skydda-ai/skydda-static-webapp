@@ -15,7 +15,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
       setTimeout(() => {
         setPhase("complete");
         onComplete();
-      }, 5500),
+      }, 5000),
     ];
 
     return () => timers.forEach(clearTimeout);
@@ -70,14 +70,37 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
             </>
           )}
 
-          {/* Text reveal */}
+          {/* Text reveal with fill animation */}
           <motion.p
-            className="absolute bottom-1/3 text-whisper text-sm tracking-[0.3em] uppercase"
+            className="absolute bottom-1/3 text-sm tracking-[0.3em] uppercase"
             initial={{ opacity: 0 }}
-            animate={{ opacity: phase === "text" || phase === "fracture" ? 0.6 : 0 }}
+            animate={{ opacity: phase === "text" || phase === "fracture" ? 1 : 0 }}
             transition={{ duration: 1 }}
           >
-            In Swedish, it means to protect.
+            <motion.span
+              className="inline-block font-medium"
+              style={{
+                backgroundImage: "linear-gradient(to right, hsl(0, 0%, 92%) 0%, hsl(0, 0%, 92%) 50%, transparent 50%, transparent 100%)",
+                backgroundSize: "200% 100%",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+              initial={{ backgroundPosition: "100% 0%" }}
+              animate={{
+                backgroundPosition:
+                  phase === "text" || phase === "fracture"
+                    ? "0% 0%"
+                    : "100% 0%",
+              }}
+              transition={{
+                duration: 2,
+                delay: phase === "text" ? 0.5 : 0,
+                ease: [0.25, 0.1, 0.25, 1],
+              }}
+            >
+              In Swedish, it means to protect.
+            </motion.span>
           </motion.p>
         </motion.div>
       )}
