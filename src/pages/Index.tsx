@@ -54,7 +54,7 @@ const Index = () => {
         <NarrativeSection
           headline={
             <>
-              <span className="font-black">A</span>ttention is all you need.{" "} <span className="font-black">I</span>ntelligence follows.
+              <span className="font-black">A</span>ttention is the front line.{" "} <span className="font-black">I</span>ntelligence follows.
             </>
           }
           verses={[

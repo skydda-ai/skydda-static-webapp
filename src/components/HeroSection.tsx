@@ -17,9 +17,9 @@ const HeroSection = () => {
         {/* Sub-text */}
         <div className="relative h-32">
           <p className="verse text-lg md:text-xl leading-relaxed absolute inset-0 opacity-100">
-            They move at machine speed. They adapt. They disguise.
+          Attackers move at machine speed, hiding in the roar of the static.
             <br />
-            <span className="block mt-2">While you sleep, the noise becomes deafening.</span>
+            <span className="block mt-2">While you sleep, the noise becomes their shield; while you blink, they adapt.</span>
           </p>
         </div>
 

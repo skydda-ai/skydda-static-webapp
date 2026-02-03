@@ -85,15 +85,13 @@ const LivingOrganism = () => {
         style={{ opacity: 0.8 }}
       >
         <h2 className="headline-serif text-5xl text-foreground mb-6">
-          It is not a tool. It is alive.
+        It learns. It evolves. It shields.
         </h2>
         <p 
           className="verse text-base md:text-xl max-w-md mx-auto text-secondary-foreground"
           style={{ textShadow: "0 2px 10px rgba(0, 0, 0, 0.8)" }}
         >
-          Static defenses die. This... evolves.
-          <br />
-          <span className="block mt-2">It does not merely observe your world. It masters it.</span>
+          Static defenses die. This machine evolves. It does not merely observe your world. It masters it.
         </p>
       </motion.div>
     </section>

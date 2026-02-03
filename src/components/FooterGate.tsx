@@ -35,31 +35,30 @@ const FooterGate = () => {
 
         {/* Mystery stat */}
         <p className="text-muted-foreground text-sm mb-2">
-          We are currently protecting{" "}
-          <span className="text-primary">[Redacted]</span> enterprises.
+        In a world of chaotic noise, one missed signal is havoc. We've unified the thousands into one unbreakable defense. The machine has mastered the silence; now, it's your turn to own it.
         </p>
 
-        <p className="headline-serif italic text-[20px] text-foreground mb-12">
+        {/* <p className="headline-serif italic text-[20px] text-foreground mb-12">
           Are you ready to evolve?
-        </p>
+        </p> */}
 
         {/* The Gate */}
         <form onSubmit={handleSubmit}>
           {!isSubmitted ? (
             <div className="relative">
-              <input
+              {/* <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 className="gate-input text-center"
                 required
-              />
+              /> */}
               <button
                 type="submit"
                 className="mt-8 bg-primary text-black text-xs tracking-[0.3em] uppercase font-medium py-4 px-8 rounded-none hover:bg-primary/90 transition-colors duration-300"
               >
-                Request Invitation
+                By Invitation Only
               </button>
             </div>
           ) : (
