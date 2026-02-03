@@ -34,7 +34,7 @@ const FooterGate = () => {
         </p>
 
         {/* Mystery stat */}
-        <p className="text-muted-foreground text-sm mb-2">
+        <p className="verse text-base md:text-xl max-w-lg mx-auto relative text-foreground/70 !leading-[2] not-italic">
         In a world of chaotic noise, one missed signal is havoc. We've unified the thousands into one unbreakable defense. The machine has mastered the silence; now, it's your turn to own it.
         </p>
 
@@ -43,7 +43,7 @@ const FooterGate = () => {
         </p> */}
 
         {/* The Gate */}
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="mt-4">
           {!isSubmitted ? (
             <div className="relative">
               {/* <input

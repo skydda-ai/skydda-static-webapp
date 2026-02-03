@@ -58,7 +58,7 @@ const SilenceSection = () => {
         <div className="absolute inset-0 -m-24 rounded-full bg-gradient-radial from-background via-background/90 to-transparent blur-2xl" />
 
         <motion.h2
-          className="headline-serif text-2xl md:text-3xl lg:text-4xl text-foreground/90 mb-8 relative"
+          className="headline-serif text-2xl md:text-3xl lg:text-4xl text-foreground/90 mb-8 relative !leading-[1.25]"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 0.5 }}
@@ -67,7 +67,7 @@ const SilenceSection = () => {
         </motion.h2>
 
         <motion.p
-          className="verse text-base md:text-xl max-w-lg mx-auto relative text-secondary-foreground"
+          className="verse text-base md:text-xl max-w-lg mx-auto relative text-foreground/70 !leading-[2]"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 0.7 }}

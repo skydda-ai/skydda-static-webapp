@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6">
-      <div className="text-center max-w-2xl mx-auto z-10">
+      <div className="text-center max-w-3xl mx-auto z-10">
         {/* Main Headline */}
         <motion.h1
-          className="headline-serif text-3xl md:text-4xl lg:text-5xl text-foreground/90 mb-8"
+          className="headline-serif text-3xl md:text-4xl lg:text-5xl text-foreground/90 mb-8 !leading-[1.25]"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 0.5 }}
@@ -16,10 +16,9 @@ const HeroSection = () => {
 
         {/* Sub-text */}
         <div className="relative h-32">
-          <p className="verse text-lg md:text-xl leading-relaxed absolute inset-0 opacity-100">
+          <p className="verse text-lg md:text-xl leading-relaxed absolute inset-0 opacity-100 !leading-[2]">
           Attackers move at machine speed, hiding in the roar of the static.
-            <br />
-            <span className="block mt-2">While you sleep, the noise becomes their shield; while you blink, they adapt.</span>
+            <span className="block">While you sleep, the noise becomes their shield; while you blink, they adapt.</span>
           </p>
         </div>
 
