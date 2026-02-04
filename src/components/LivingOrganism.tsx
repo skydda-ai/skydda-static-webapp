@@ -88,7 +88,7 @@ const LivingOrganism = () => {
         It learns. It evolves.
         </h2> */}
         <p 
-          className="verse text-base md:text-xl max-w-md mx-auto text-foreground/90 !leading-[2]"
+          className="verse text-base md:text-3xl max-w-md mx-auto text-foreground !leading-[2]"
           style={{ textShadow: "0 2px 10px rgba(0, 0, 0, 0.8)" }}
         >
           Static defenses die.

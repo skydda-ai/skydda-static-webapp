@@ -58,9 +58,7 @@ const Index = () => {
             </>
           }
           verses={[
-            "To see everything is to see nothing.",
-            "The human eye must narrow to focus.",
-            "The machine eye widens.",
+            "Today, to see everything is to see nothing.",
             "We provide infinite attention.",
             "You reap the luxury of silence.",
           ]}
@@ -71,10 +69,9 @@ const Index = () => {
         <NarrativeSection
           headline="Born in the Shadows."
           verses={[
-            "We did not build this in a lab.",
-            "It was forged by those who have lived in the dark.",
-            "Veterans of the shadow world. Defenders of nations.",
-            "We taught it what we know. Now, it knows more.",
+            "It is forged by those who have lived in the shadows' edge.",
+            "Guardians of nations.",
+            "We taught it what we know. Now, we learn from it.",
           ]}
           index={0}
         />
