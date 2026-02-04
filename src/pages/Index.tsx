@@ -70,7 +70,7 @@ const Index = () => {
           headline="Born in the Shadows."
           verses={[
             "It is forged by those who have lived in the shadows' edge.",
-            "Guardians of nations.",
+            "Guardians of the nations.",
             "We taught it what we know. Now, we learn from it.",
           ]}
           index={0}
