@@ -91,7 +91,7 @@ const LivingOrganism = () => {
           className="verse text-base md:text-xl max-w-md mx-auto text-foreground/90 !leading-[2]"
           style={{ textShadow: "0 2px 10px rgba(0, 0, 0, 0.8)" }}
         >
-          Static defenses die. This machine evolves. It does not merely observe your world. It masters it.
+          Static defenses die. We evolve. It does not merely observe your world. It masters it.
         </p>
       </motion.div>
     </section>

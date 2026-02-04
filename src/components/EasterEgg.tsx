@@ -55,9 +55,9 @@ const EasterEgg = () => {
             transition={{ duration: 1.5, delay: 0.5 }}
           >
             <p className="headline-serif italic text-xl md:text-2xl text-primary/80 leading-relaxed">
-              "One alert is weak. Thousands are noise.
+              "One alert is a whisper. Thousands are noise.
               <br />
-              <span className="block mt-4">United, they are unbreakable."</span>
+              <span className="block mt-4">We make them a shield."</span>
             </p>
           </motion.div>
         </motion.div>
