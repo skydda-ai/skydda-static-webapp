@@ -84,14 +84,18 @@ const LivingOrganism = () => {
         className="absolute text-center px-6"
         style={{ opacity: 0.8 }}
       >
-        <h2 className="headline-serif text-5xl text-foreground mb-6 !leading-[1.25]">
-        It learns. It evolves. It shields.
-        </h2>
+        {/* <h2 className="headline-serif text-5xl text-foreground mb-6 !leading-[1.25]">
+        It learns. It evolves.
+        </h2> */}
         <p 
           className="verse text-base md:text-xl max-w-md mx-auto text-foreground/90 !leading-[2]"
           style={{ textShadow: "0 2px 10px rgba(0, 0, 0, 0.8)" }}
         >
-          Static defenses die. We evolve. It does not merely observe your world. It masters it.
+          Static defenses die.
+          <br />
+          We are on the move.
+          <br/>
+           we learn, we evolve.
         </p>
       </motion.div>
     </section>

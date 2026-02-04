@@ -72,7 +72,9 @@ const SilenceSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 0.7 }}
         >
-          The attacker thrives in the scream; our machines find the truth in the whisper.Let the intelligence carry the weight and the noise dissolve into shielded clarity.
+          Let the machine carry the weight. Let the noise dissolve.
+          <br/>
+          A future without us is no longer conceivable.
           {/* <span className="block mt-2"></span> */}
         </motion.p>
       </div>

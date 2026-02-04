@@ -34,13 +34,13 @@ const FooterGate = () => {
         </p>
 
         {/* Mystery stat */}
-        <p className="verse text-base md:text-xl max-w-lg mx-auto relative text-foreground/70 !leading-[2] not-italic">
+        {/* <p className="verse text-base md:text-xl max-w-lg mx-auto relative text-foreground/70 !leading-[2] not-italic">
         In a world of chaotic noise, one missed signal is havoc. We've unified the thousands into one unbreakable defense. The machine has mastered the silence; now, it's your turn to own it.
-        </p>
-
-        {/* <p className="headline-serif italic text-[20px] text-foreground mb-12">
-          Are you ready to evolve?
         </p> */}
+
+        <p className="headline-serif italic text-[20px] text-foreground mb-12">
+          Are you ready to evolve?
+        </p>
 
         {/* The Gate */}
         <form onSubmit={handleSubmit} className="mt-4">
