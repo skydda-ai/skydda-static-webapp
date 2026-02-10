@@ -56,7 +56,7 @@ const FooterGate = () => {
               /> */}
               <button
                 type="submit"
-                className="mt-8 bg-primary text-black text-xs tracking-[0.3em] uppercase font-medium py-4 px-8 rounded-none hover:bg-primary/90 transition-colors duration-300"
+                className="cursor-none mt-8 bg-primary text-black text-xs tracking-[0.3em] uppercase font-medium py-4 px-8 rounded-none hover:bg-primary/90 transition-colors duration-300"
               >
                 By Invitation Only
               </button>
