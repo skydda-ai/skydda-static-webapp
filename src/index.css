@@ -158,4 +158,32 @@
            text-foreground placeholder:text-muted-foreground/40
            py-3 px-0 w-full transition-colors duration-500;
   }
+
+  /* Shiny text sweep — gradient moves left to right (for loading subtext) */
+  .shiny-text {
+    color: transparent !important;
+    background: linear-gradient(
+      90deg,
+      hsl(0 0% 92%) 0%,
+      hsl(0 0% 92%) 38%,
+      hsl(0 0% 100%) 50%,
+      hsl(0 0% 92%) 62%,
+      hsl(0 0% 92%) 100%
+    );
+    background-size: 200% 100%;
+    background-position: 200% 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shinySweep 4.8s ease-in-out 0.74s infinite;
+  }
+
+  @keyframes shinySweep {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
 }
