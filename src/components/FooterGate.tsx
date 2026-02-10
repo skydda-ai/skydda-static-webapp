@@ -29,7 +29,7 @@ const FooterGate = () => {
           Skydda.
         </h2>
 
-        <p className="text-muted-foreground text-sm tracking-[0.2em] uppercase mb-16">
+        <p className="text-muted-foreground text-sm tracking-[0.2em] uppercase mb-12">
           The Shield That Thinks.
         </p>
 
@@ -38,7 +38,7 @@ const FooterGate = () => {
         In a world of chaotic noise, one missed signal is havoc. We've unified the thousands into one unbreakable defense. The machine has mastered the silence; now, it's your turn to own it.
         </p> */}
 
-        <p className="headline-serif italic text-[20px] text-foreground mb-12">
+        <p className="headline-serif italic text-[20px] text-foreground mb-2">
           Are you ready to evolve?
         </p>
 
@@ -56,7 +56,7 @@ const FooterGate = () => {
               /> */}
               <button
                 type="submit"
-                className="cursor-default mt-8 bg-primary text-black text-xs tracking-[0.3em] uppercase font-medium py-4 px-8 rounded-none hover:bg-primary/90 transition-colors duration-300"
+                className="cursor-default mt-4 bg-primary text-black text-xs tracking-[0.3em] uppercase font-medium py-4 px-8 rounded-none hover:bg-primary/90 transition-colors duration-300"
               >
                 By Invitation Only
               </button>
