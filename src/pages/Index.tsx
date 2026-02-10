@@ -69,8 +69,8 @@ const Index = () => {
         <NarrativeSection
           headline="Born in the Shadows."
           verses={[
-            "It is forged by those who have lived in the shadows' edge.",
-            "Guardians of the nations.",
+            "Skydda was forged by those who have lived in the shadow's edge.",
+            "Guardians of the nation.",
             "We taught it what we know. Now, we learn from it.",
           ]}
           index={0}
