@@ -15,6 +15,7 @@ export default {
     extend: {
       fontFamily: {
         serif: ["Playfair Display", "Georgia", "serif"],
+        sans: ["Inter", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -56,6 +57,7 @@ export default {
         },
         void: "hsl(var(--void))",
         whisper: "hsl(var(--whisper))",
+        body1: "hsl(var(--body1))",
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Ubuntu+Sans:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -57,6 +57,7 @@
     --glow-secondary: 200 70% 40%;
     --void: 0 0% 2%;
     --whisper: 0 0% 40%;
+    --body1: 0 0% 63.5%;
     
     /* Gradients - Using colors from the centralized system */
     --gradient-glow: linear-gradient(135deg, hsl(185 80% 50% / 0.2), hsl(200 70% 40% / 0.1));
@@ -91,6 +92,17 @@
   .headline-serif {
     font-family: 'Playfair Display', Georgia, serif;
     @apply tracking-tight;
+  }
+
+  .headline-sans {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    @apply tracking-tight;
+  }
+
+  /* Screenshot-inspired section headers using Ubuntu Sans */
+  .section-header {
+    font-family: 'Ubuntu Sans', sans-serif;
+    @apply text-sm uppercase tracking-[0.25em] font-medium;
   }
 
   /* Whisper text - barely visible until needed */
