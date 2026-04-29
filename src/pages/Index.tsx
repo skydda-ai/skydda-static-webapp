@@ -7,6 +7,7 @@ import NarrativeSection from "@/components/NarrativeSection";
 import LivingOrganism from "@/components/LivingOrganism";
 import SilenceSection from "@/components/SilenceSection";
 import FooterGate from "@/components/FooterGate";
+import Footer from "@/components/Footer";
 import EasterEgg from "@/components/EasterEgg";
 
 const Index = () => {
@@ -84,6 +85,9 @@ const Index = () => {
 
         {/* Footer Gate */}
         <FooterGate />
+
+        {/* Traditional Footer */}
+        <Footer />
 
         {/* Easter Egg - appears after 30s idle */}
         <EasterEgg />

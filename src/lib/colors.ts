@@ -165,6 +165,13 @@ export const colors = {
     rgb: "rgb(102, 102, 102)",
     hex: "#666666",
   },
+  body1: {
+    hsl: "0 0% 63.5%",
+    rgb: "rgb(162, 162, 162)",
+    hex: "#a2a2a2",
+    hsla: (opacity: number) => `hsla(0, 0%, 63.5%, ${opacity})`,
+    rgba: (opacity: number) => `rgba(162, 162, 162, ${opacity})`,
+  },
 
   // Particle field background (used in ParticleField.tsx)
   particleBackground: {
