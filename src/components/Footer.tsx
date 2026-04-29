@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="flex items-center gap-8 md:gap-12">
           <Link
             to="/privacy-policy"
-            className={`text-[10px] tracking-[0.2em] uppercase leading-none transition-all duration-300 flex items-center gap-2 group ${isPathActive("/privacy-policy") ? "text-primary" : "text-muted-foreground hover:text-primary"
+            className={`text-[10px] tracking-[0.2em] uppercase leading-none transition-all duration-300 flex items-center gap-2 group ${isPathActive("/privacy-policy") ? "text-white" : "text-muted-foreground hover:text-white"
               }`}
           >
             {isPathActive("/privacy-policy") && (
@@ -29,7 +29,7 @@ const Footer = () => {
           </Link>
           <Link
             to="/terms-of-service"
-            className={`text-[10px] tracking-[0.2em] uppercase leading-none transition-all duration-300 flex items-center gap-2 group ${isPathActive("/terms-of-service") ? "text-primary" : "text-muted-foreground hover:text-primary"
+            className={`text-[10px] tracking-[0.2em] uppercase leading-none transition-all duration-300 flex items-center gap-2 group ${isPathActive("/terms-of-service") ? "text-white" : "text-muted-foreground hover:text-white"
               }`}
           >
             {isPathActive("/terms-of-service") && (
